@@ -1,4 +1,9 @@
-﻿using System;
+﻿using Academy.Week7.Esercitazione.Core1;
+using Academy.Week7.Esercitazione.Core1.BL;
+using Academy.Week7.Esercitazione.Core1.Entities;
+using Academy.Week7.Esercitazione.Core1.Interfaces;
+using Academy.Week7.Esercitazione.EF1.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -7,25 +12,50 @@ using System.Text;
 
 namespace Academy.Week7.Esercitazione.WCF
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class ClientService : IClientService
     {
-        public string GetData(int value)
+        // Business Layer 
+        IMainBL mainBL;
+
+        // costruttore con risoluzione dipendenze 
+        public ClientService()
         {
-            return string.Format("You entered: {0}", value);
+            // Configurazione DI
+            DependencyContainer.Register<IMainBL, MainBL>();
+            DependencyContainer.Register<IClientRepository, EfClientRepository>();
+            DependencyContainer.Register<IOrderRepository, EfOrderRepository>();
+
+            // Risoluzione
+            mainBL = DependencyContainer.Resolve<IMainBL>();
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public bool CreateClient(Client newC)
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            if (newC == null)
+                return false;
+
+            return this.mainBL.AddClient(newC);
+        }
+
+        public bool DeleteClientById(int idC)
+        {
+            if (idC > 0)
+                return this.mainBL.DeleteClientById(idC);
+
+            return false;
+        }
+
+        public bool EditClient(Client editedC)
+        {
+            if (editedC == null)
+                return false;
+
+            return this.mainBL.UpdateClient(editedC);
+        }
+
+        public IEnumerable<Client> FetchClients()
+        {
+            return mainBL.FetchClients();
         }
     }
 }

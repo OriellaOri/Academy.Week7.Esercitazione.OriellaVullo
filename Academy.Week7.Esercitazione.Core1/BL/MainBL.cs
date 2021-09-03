@@ -18,6 +18,12 @@ namespace Academy.Week7.Esercitazione.Core1.BL
             clientRepo = cRepo;
         }
 
+        // risoluzione dipendenze con Ninject
+        public MainBL()
+        {
+            orderRepo = DependencyContainer.Resolve<IOrderRepository>();
+            clientRepo = DependencyContainer.Resolve<IClientRepository>();
+        }
 
         /* ADD */
         public bool AddClient(Client newClient)

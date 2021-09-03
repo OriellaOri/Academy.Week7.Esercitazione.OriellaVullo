@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace Academy.Week7.Esercitazione.Core.Entities
+namespace Academy.Week7.Esercitazione.Core1.Entities
 {
     [DataContract]
     public class Client

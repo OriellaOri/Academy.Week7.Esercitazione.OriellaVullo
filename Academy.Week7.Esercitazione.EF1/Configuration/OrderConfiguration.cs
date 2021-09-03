@@ -1,11 +1,11 @@
-﻿using Academy.Week7.Esercitazione.Core.Entities;
+﻿using Academy.Week7.Esercitazione.Core1.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Academy.Week7.Esercitazione.EF.Configuration
+namespace Academy.Week7.Esercitazione.EF1.Configuration
 {
     public class OrderConfiguration : IEntityTypeConfiguration<Order>
     {

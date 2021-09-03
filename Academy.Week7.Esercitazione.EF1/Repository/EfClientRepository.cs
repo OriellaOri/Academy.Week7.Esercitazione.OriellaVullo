@@ -1,31 +1,32 @@
-﻿using Academy.Week7.Esercitazione.Core.Entities;
-using Academy.Week7.Esercitazione.Core.Interfaces;
+﻿using Academy.Week7.Esercitazione.Core1.Entities;
+using Academy.Week7.Esercitazione.Core1.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
-namespace Academy.Week7.Esercitazione.EF.Repository
+namespace Academy.Week7.Esercitazione.EF1.Repository
 {
-    public class EfOrderRepository : IOrderRepository
+    public class EfClientRepository : IClientRepository
     {
         private readonly EsercitazioneContext ctx;
 
-        public EfOrderRepository()
+        public EfClientRepository()
             : this(new EsercitazioneContext()) { }
 
-        public EfOrderRepository(EsercitazioneContext ctx)
+        public EfClientRepository(EsercitazioneContext ctx)
         {
             this.ctx = ctx;
         }
 
-        public bool Add(Order newItem)
+        public bool Add(Client newItem)
         {
             if (newItem == null)
                 return false;
 
             try
             {
-                ctx.Orders.Add(newItem);
+                ctx.Clients.Add(newItem);
                 ctx.SaveChanges();
                 return true;
             }
@@ -42,10 +43,10 @@ namespace Academy.Week7.Esercitazione.EF.Repository
 
             try
             {
-                var order = ctx.Orders.Find(id);
+                var client = ctx.Clients.Find(id);
 
-                if (order != null)
-                    ctx.Orders.Remove(order);
+                if (client != null)
+                    ctx.Clients.Remove(client);
 
                 ctx.SaveChanges();
 
@@ -57,37 +58,37 @@ namespace Academy.Week7.Esercitazione.EF.Repository
             }
         }
 
-        public List<Order> Fetch(Func<Order, bool> filter = null)
+        public List<Client> Fetch(Func<Client, bool> filter = null)
         {
             try
             {
                 if (filter != null)
-                    return ctx.Orders.Where(filter).ToList();
+                    return ctx.Clients.Where(filter).ToList();
 
-                return ctx.Orders.ToList();
+                return ctx.Clients.ToList();
             }
             catch (Exception)
             {
-                return new List<Order>();
+                return new List<Client>();
             }
         }
 
-        public Order GetByID(int id)
+        public Client GetByID(int id)
         {
             if (id <= 0)
                 return null;
 
-            return ctx.Orders.Find(id);
+            return ctx.Clients.Find(id);
         }
 
-        public bool Update(Order updatedItem)
+        public bool Update(Client updatedItem)
         {
             if (updatedItem == null)
                 return false;
 
             try
             {
-                ctx.Orders.Update(updatedItem);
+                ctx.Clients.Update(updatedItem);
                 ctx.SaveChanges();
                 return true;
             }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Academy.Week7.Esercitazione.Core.Entities
+namespace Academy.Week7.Esercitazione.Core1.Entities
 {
     public class Order
     {        

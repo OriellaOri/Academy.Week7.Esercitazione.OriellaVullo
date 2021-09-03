@@ -1,11 +1,11 @@
-﻿using Academy.Week7.Esercitazione.Core.Entities;
-using Academy.Week7.Esercitazione.EF.Configuration;
+﻿using Academy.Week7.Esercitazione.Core1.Entities;
+using Academy.Week7.Esercitazione.EF1.Configuration;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Academy.Week7.Esercitazione.EF
+namespace Academy.Week7.Esercitazione.EF1
 {
     public class EsercitazioneContext : DbContext
     {

@@ -8,7 +8,7 @@ using System.Text;
 namespace Academy.Week7.Esercitazione.WCF
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
-    public class Service1 : IService1
+    public class ClientService : IClientService
     {
         public string GetData(int value)
         {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Academy.Week7.Esercitazione.Core.Interfaces
+namespace Academy.Week7.Esercitazione.Core1.Interfaces
 {
     public interface IRepository<T>
     {

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy.Week7.Esercitazione
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy.Week7.Esercitazione.APIClient", "Academy.Week7.Esercitazione.APIClient\Academy.Week7.Esercitazione.APIClient.csproj", "{40145FA3-A0BB-4EE5-A23D-594C86715B18}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy.Week7.Esercitazione.SelfHosting", "Academy.Week7.Esercitazione.SelfHosting\Academy.Week7.Esercitazione.SelfHosting.csproj", "{75D34960-0C5F-49D1-ADA2-2211A847FB2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{40145FA3-A0BB-4EE5-A23D-594C86715B18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40145FA3-A0BB-4EE5-A23D-594C86715B18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40145FA3-A0BB-4EE5-A23D-594C86715B18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75D34960-0C5F-49D1-ADA2-2211A847FB2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D34960-0C5F-49D1-ADA2-2211A847FB2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D34960-0C5F-49D1-ADA2-2211A847FB2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D34960-0C5F-49D1-ADA2-2211A847FB2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

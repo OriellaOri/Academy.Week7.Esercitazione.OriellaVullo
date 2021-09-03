@@ -34,13 +34,13 @@ namespace Academy.Week7.Esercitazione.WCF
             if (newC == null)
                 return false;
 
-            return this.mainBL.AddClient(newC);
+            return mainBL.AddClient(newC);
         }
 
         public bool DeleteClientById(int idC)
         {
             if (idC > 0)
-                return this.mainBL.DeleteClientById(idC);
+                return mainBL.DeleteClientById(idC);
 
             return false;
         }
@@ -52,7 +52,7 @@ namespace Academy.Week7.Esercitazione.WCF
             if (editedC == null)
                 return false;
 
-            return this.mainBL.UpdateClient(editedC);
+            return mainBL.UpdateClient(editedC);
         }
 
         public IEnumerable<Client> FetchClients()

@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Week7.Esercitazione
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy.Week7.Esercitazione.API", "Academy.Week7.Esercitazione.API\Academy.Week7.Esercitazione.API.csproj", "{4DB7488D-DC14-442C-A620-431FF1825CC0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy.Week7.Esercitazione.APIClient", "Academy.Week7.Esercitazione.APIClient\Academy.Week7.Esercitazione.APIClient.csproj", "{40145FA3-A0BB-4EE5-A23D-594C86715B18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4DB7488D-DC14-442C-A620-431FF1825CC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DB7488D-DC14-442C-A620-431FF1825CC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DB7488D-DC14-442C-A620-431FF1825CC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40145FA3-A0BB-4EE5-A23D-594C86715B18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40145FA3-A0BB-4EE5-A23D-594C86715B18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40145FA3-A0BB-4EE5-A23D-594C86715B18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40145FA3-A0BB-4EE5-A23D-594C86715B18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

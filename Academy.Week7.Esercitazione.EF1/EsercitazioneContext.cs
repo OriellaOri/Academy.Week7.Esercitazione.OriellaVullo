@@ -10,7 +10,9 @@ namespace Academy.Week7.Esercitazione.EF1
     public class EsercitazioneContext : DbContext
     {
         //REST
-        public EsercitazioneContext(DbContextOptions<EsercitazioneContext> options) : base(options) { }
+        public EsercitazioneContext(DbContextOptions<EsercitazioneContext> options) 
+            : base(options) { }
+
         //WCF
         public EsercitazioneContext() : base() { }
 

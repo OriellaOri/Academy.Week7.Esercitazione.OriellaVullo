@@ -45,6 +45,8 @@ namespace Academy.Week7.Esercitazione.WCF
             return false;
         }
 
+        //NOTE : per editare un cliente bisogna inserire tutti i campi 
+        // anche quelli che non si vogliono cambiare 
         public bool EditClient(Client editedC)
         {
             if (editedC == null)
